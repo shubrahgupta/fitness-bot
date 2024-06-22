@@ -4,10 +4,10 @@ from langchain_openai import AzureChatOpenAI
 from langchain_core.messages import HumanMessage, SystemMessage
 import os
 from langchain_core.output_parsers import StrOutputParser
-#TODO:generate requirements.txt file
+
 prompts = {
     "/tip":"Generate a tip or motivational quote related to wellness/gym/diet. Don't include unnecessary information or text.",
-    "/dietplan":"You are a certified nutritionist with 10 years experience. Generate a good health diet plan for a week according to the user's weight, height, bmi, purpose, and preference(veg/non-veg). If not stated, give a generic diet plan for good health. Also provide the approximate nutritional value per day. Don't include unnecessary information or text. Keep the answers summarized and concise.",
+    "/dietplan":"You are a certified nutritionist with 10 years experience. Generate a good health diet plan for 1 day according to the user's weight, height, bmi, purpose, and preference(veg/non-veg). If not stated, give a generic diet plan for good health. Also provide the approximate nutritional value per day. Don't include unnecessary information or text. Keep the answers summarized and concise.",
     "/workoutplan":"You are a certified personal fitness trainer with 10 years experience. Generate a good health workout plan for a day according to the user's weight, height, bmi, purpose, and exercise-mode. If not stated, give a generic exercise plan for good health. Also provide the approximate nutritional value per day. Don't include unnecessary information or text. Keep the answers summarized and concise.",
     "/query":"You are a certified personal fitness trainer and nutrition expert with 10 years experience. Answer the user's query with your best possible advice. Don't ask any follow-up question. Don't include unnecessary information or text. Keep the answers summarized and concise.",
            }
@@ -38,7 +38,7 @@ def openai_handler(user_response, category):
 def msg_handler(incoming_msg):
 
     if '/start' in incoming_msg:
-        response = """Hi, start your wellness journey now. please use '/tip' or '/dietplan' or '/workoutPlan' or '/reminder' or '/query' tag along with the information needed.
+        response = """Hi, start your wellness journey now. please use '/tip' or '/dietplan' or '/workoutplan' or '/reminder' or '/query' tag along with the information needed.
                     \nThese templates can be used:
                     \n'/dietplan weight: 50Kg, height: 5 feet, purpose: muscle-enhancement, non-veg food'
                     \n'/workoutplan weight: 50Kg, height: 5 feet, purpose: leg-muscles-enhancement, exercise mode: mid'
@@ -54,7 +54,7 @@ def msg_handler(incoming_msg):
     elif '/query' in incoming_msg:
         response = openai_handler(incoming_msg,'/query')
     else:
-        response = """Sorry! I only answer to the tags, please use '/tip' or '/dietplan' or '/workoutPlan' or '/reminder' or '/query' along with the information needed.
+        response = """Sorry! I only answer to the tags, please use '/tip' or '/dietplan' or '/workoutplan' or '/reminder' or '/query' along with the information needed.
                     \nThese templates can be used:
                     \n'/dietplan weight: 50Kg, height: 5 feet, purpose: muscle-enhancement, non-veg food'
                     \n'/workoutplan weight: 50Kg, height: 5 feet, purpose: leg-muscles-enhancement, exercise mode: mid'
