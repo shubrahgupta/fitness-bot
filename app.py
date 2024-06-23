@@ -82,6 +82,7 @@ def msg_handler(incoming_msg, from_number):
                     \n'/dietplan weight: 50Kg, height: 5 feet, purpose: muscle-enhancement, non-veg food'
                     \n'/workoutplan weight: 50Kg, height: 5 feet, purpose: leg-muscles-enhancement, exercise mode: mid'
                     \n'/query I am unable to feel my back-muscle while doing lat-pull downs. What should I do to improve?'
+                    \n'/reminder Please set an call reminder for lunch at 2 PM on 25/06/2024'
                     \n'/tip'
                     """
     elif '/tip' in incoming_msg:
@@ -102,6 +103,7 @@ def msg_handler(incoming_msg, from_number):
                     \n'/dietplan weight: 50Kg, height: 5 feet, purpose: muscle-enhancement, non-veg food'
                     \n'/workoutplan weight: 50Kg, height: 5 feet, purpose: leg-muscles-enhancement, exercise mode: mid'
                     \n'/query I am unable to feel my back-muscle while doing lat-pull downs. What should I do to improve?'
+                    \n'/reminder Please set an call reminder for lunch at 2 PM on 25/06/2024'
                     \n'/tip'
 
                     """
