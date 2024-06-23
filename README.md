@@ -20,6 +20,8 @@ To get into the sandbox, follow this:
 ![Whatsapp Sandbox](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ixfs1fkutjlpyz0ujo69.png)
 
 
+This link can help you get started with the Twilio Whatsapp sandbox:[https://www.twilio.com/docs/whatsapp/sandbox](https://www.twilio.com/docs/whatsapp/sandbox)
+
 When the sandbox starts, the user can get started with '/start' command, which throws the following message: 
 
 *Hi, start your wellness journey now. please use '/tip' or '/dietplan' or '/workoutplan' or '/reminder' or '/query' tag along with the information needed.*
